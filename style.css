@@ -5,23 +5,20 @@
 
 .contC {
     position: relative;
-    width: 100vw;
-    height: 100vh;
+    height: 800px;
 }
 
-.contR{
+.contR {
     position:absolute;
     left: 50%;
-    top: 30%;
-    transform: translate(-50%,-30%);
-    font-size: min(6vh,6vw);
+    top: 50%;
+    transform: translate(-50%,-50%);
+    font-size: 6vh;
     font-weight: bold;
 }
-
 
 body{
     background-color: #e84388;
     color: white;
-    /* background-image: url(logo2.jpg); */
 }
 
