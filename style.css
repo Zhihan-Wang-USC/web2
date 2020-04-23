@@ -1,0 +1,50 @@
+/* *{
+    margin: 0;
+    padding: 0;
+} */
+
+h3{
+    color: green;
+}
+
+body{
+    background-color: bisque;
+    color: rgb(6, 94, 64);
+    /* font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5rem;
+    font-weight: normal; */
+    font: normal 1rem Arial; /*abbr of above*/
+
+    line-height: 2rem;
+}
+
+.box-1{
+    background-color: rgb(255, 108, 108);
+    color: white;
+    padding: 3%;
+    border: 5px rgba(255, 228, 196, 0.705) dashed
+}
+
+.box-1 h1{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: normal;
+    font-style: italic;
+    text-decoration: underline;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    word-spacing: 1rem;
+}
+
+.box-2{
+    border:3px dotted #CCC;
+    /*limit space of content*/
+    padding: 3rem;
+    /*extedn space outside*/
+    margin: 20px 0;
+}
+
+.container{
+    width: 80%;
+    margin: auto;
+    /* padding: 0%; */
+}
