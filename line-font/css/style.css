@@ -1,0 +1,79 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color:#e71a70;
+}
+
+.depth{
+    background-image: radial-gradient(rgba(255, 255, 255, 0.1),rgba(0, 0, 0, 0) 40%,rgba(0, 0, 0, 0.4) 90%, rgb(0, 0, 0,0.6) 100%);
+}
+
+.container {
+  font-size: 8vw;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+svg {
+  position: absolute;
+  width: 90%;
+  height: 100%;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.text {
+  fill: none;
+  stroke-width: 0.2vw;
+  stroke-dasharray: 0 240;
+  stroke-dashoffset: 0;
+}
+
+/* rgb(39, 135, 238) (47, 169, 92) (249, 189, 56) (235, 61, 50) */
+.text:nth-child(4n + 1) {
+  stroke: rgba(255, 255, 255, 0.80);
+  animation: text1 4s ease-in-out forwards;
+}
+.text:nth-child(4n + 2) {
+  stroke: rgb(255, 255, 255,0.70);
+  animation: text2 4s ease-in-out forwards;
+}
+.text:nth-child(4n + 3) {
+  stroke: rgb(255, 255, 255,0.60);
+  animation: text3 4s ease-in-out forwards;
+}
+.text:nth-child(4n + 4) {
+  stroke: rgb(255, 255, 255,0.50);
+  animation: text4 4s ease-in-out forwards;
+}
+
+@keyframes text1 {
+  100% {
+    stroke-dashoffset: 1000;
+    stroke-dasharray: 60 180;
+  }
+}
+
+@keyframes text2 {
+  100% {
+    stroke-dashoffset: 1060;
+    stroke-dasharray: 60 180;
+  }
+}
+
+@keyframes text3 {
+  100% {
+    stroke-dashoffset: 1120;
+    stroke-dasharray: 60 180;
+  }
+}
+
+@keyframes text4 {
+  100% {
+    stroke-dashoffset: 1180;
+    stroke-dasharray: 60 180;
+  }
+}
