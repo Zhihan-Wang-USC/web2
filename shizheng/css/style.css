@@ -113,6 +113,15 @@ body {
   margin-right: 10%;
 }
 
+.small3wd{
+  /* display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap; */
+  font-size: 2vw;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
 @keyframes part {
   0% {
     width: 0px;
