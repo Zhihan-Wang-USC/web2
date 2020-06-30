@@ -1,18 +1,13 @@
 :root {
-  --main-dark-color: rgb(2, 24, 83);
-  --main-medium-color: rgb(2, 24, 83);
-  --main-light-color: rgb(0, 255, 234);
-  --main-text-color: rgb(0, 255, 234);
-  --main-deco-color: rgb(0, 157, 230);
-  --shadow01: rgba(255, 255, 255, 0.1);
-  --shadow03: rgba(255, 255, 255, 0.3);
-  --shadow06: rgba(0, 0, 0, 0.6);
-}
+  --main-dark-color: rgba(204, 32, 99, 1);
+  --main-medium-color: #e84388;
+  --main-light-color: #ffffff;
+  --main-text-color: #ffffff;
+  --main-deco-color: #ffa4f7;
 
-* {
-  margin: 0;
-  padding: 0;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  --shadow01: rgba(0, 0, 0, 0.1);
+  --shadow03: rgba(0, 0, 0, 0.3);
+  --shadow06: rgba(0, 0, 0, 0.6);
 }
 
 #watermark{
@@ -22,9 +17,22 @@
 	background-image: url(../images/multiWM.png);
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--main-light-color);
+}
+
+header {
+  text-align: center;
+  padding: 0.7rem;
+  word-spacing: 1rem;
+}
+
 body {
-  background-color: rgb(2, 24, 83);
-  color: var(--main-text-color);
+  background-color: var(--main-dark-color);
+  height: 200vh;
 }
 
 nav {
@@ -43,7 +51,6 @@ nav {
 }
 
 nav > button {
-  color: inherit;
   width: 18vw;
   background-color: inherit;
   padding: 0px 10px 0px 10px;
@@ -61,24 +68,14 @@ nav > button:hover {
   border-radius: 5px;
 }
 
-.container {
-  width: min(80%, 600px);
-  margin: auto;
-  margin-top: 5rem;
-}
-
-.container p,
-.container h1 {
-  line-height: 2em;
-  margin: 6rem 0rem;
-  color: rgb(0, 255, 234);
-  letter-spacing: 0.5px;
-}
-
-.bordered {
-  padding: 5%;
-  border: 0.3rem outset rgb(0, 157, 230);
-  border-radius: 0.5rem;
-  background-color: var(--main-medium-color);
-  /* border-style: outset; */
+@keyframes show {
+  0% {
+    border-color: transparent;
+  }
+  50% {
+    border-color: transparent;
+  }
+  100% {
+    border-color: var(--shadow03);
+  }
 }

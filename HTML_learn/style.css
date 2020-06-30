@@ -1,0 +1,52 @@
+:root {
+  --main-dark-color: rgba(204, 32, 99, 1);
+  --main-medium-color: #e84388;
+  --main-light-color: #ffffff;
+  --main-deco-color: #ffa4f7;
+  --shadow03: rgba(0, 0, 0, 0.3);
+  --shadow06: rgba(0, 0, 0, 0.6);
+}
+header {
+  text-align: center;
+  background-color: black;
+  color: white;
+  padding: 0.7rem;
+}
+
+#sampleid {
+  color: brown;
+  font-size: larger;
+  font-weight: bold;
+}
+
+nav {
+  position: sticky;
+  top: 0;
+  background-color: var(--main-medium-color);
+  /* border: 2px solid var(--main-deco-color); */
+  border-radius: 0px 0px 20px 0px;
+  margin: 1px;
+  display: flex;
+  align-content: center;
+  justify-content: space-evenly;
+  box-shadow: 0px 3px 0px 3px rgba(0, 0, 0, 0.1);
+}
+
+nav > button {
+  color: white;
+  width: 10vw;
+  background-color: inherit;
+  padding: 0px 10px 0px 10px;
+  border: 0.3rem var(--main-light-color);
+  outline: none;
+  height: 100%;
+  font-size: 20px;
+  font-weight: bold;
+  word-spacing: 1px;
+  padding: 6px 0px 6px 0px;
+  /* animation: show 5s ease-in-out forwards; */
+}
+nav > button:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 5px;
+}

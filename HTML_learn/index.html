@@ -1,16 +1,33 @@
 <!DOCTYPE html>
 <html>
-
-<head>
+  <head>
     <title>Learn HTML!</title>
-</head>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<body>
-    <nav>Check out this exercise:
-        <a href="usingHTML5semanticTags.html">usingHTML5semanticTags.html
-        </a>
+  <body>
+    <nav>
+      <button onclick="location.href='../index.html'">
+        WelcomePage
+      </button>
+      <button onclick="location.href='../HTML_learn/index.html'">
+        Learning
+      </button>
+      <button onclick="location.href='../gloomy-stars/index.html'">
+        Blog
+      </button>
+      <button onclick="location.href='../react_tic_tac_toe/index.html'">
+        Mini Projects
+      </button>
+      <button onclick="location.href='../zs/index.html'">
+        Her
+      </button>
     </nav>
-    <hr>
+    <div>
+      Check out this exercise:
+      <a href="usingHTML5semanticTags.html">usingHTML5semanticTags.html </a>
+    </div>
+    <hr />
     <!--Heading-->
     <h1>Heading One</h1>
     <h2>Heading Two</h2>
@@ -21,136 +38,150 @@
 
     <!--paragraph with attributes-->
     <p>
-        <strong>This helps emphasize</strong>
+      <strong>This helps emphasize</strong>
 
-        <!--horizontal break-->
-        <br>
+      <!--horizontal break-->
+      <br />
 
-        <em>This turns text to italic</em>
-        <br>
-        <a href="http://google.com">This creates a hyperlink</a>
-        <br>
-        <a href="http://google.com" target="_blank">This creates a hyperlink IN A NEW PAGE</a>
-        <br>
-        , ipsum dolor sit amet consectetur adipisicing elit. Natus, earum!
+      <em>This turns text to italic</em>
+      <br />
+      <a href="http://google.com">This creates a hyperlink</a>
+      <br />
+      <a href="http://google.com" target="_blank"
+        >This creates a hyperlink IN A NEW PAGE</a
+      >
+      <br />
+      , ipsum dolor sit amet consectetur adipisicing elit. Natus, earum!
     </p>
 
     <!--Lists-->
     <ul>
-        <p>here starts a list with dot bullet points</p>
-        <li>List Item 1</li>
-        <li>List Item 2</li>
-        <li>List Item 3</li>
-        <li>List Item 4</li>
-        <li>List Item 5</li>
+      <p>here starts a list with dot bullet points</p>
+      <li>List Item 1</li>
+      <li>List Item 2</li>
+      <li>List Item 3</li>
+      <li>List Item 4</li>
+      <li>List Item 5</li>
     </ul>
 
     <ol>
-        <p>here starts a list with # bullet points</p>
-        <li>List Item 1</li>
-        <li>List Item 2</li>
-        <li>List Item 3</li>
-        <li>List Item 4</li>
-        <li>List Item 5</li>
+      <p>here starts a list with # bullet points</p>
+      <li>List Item 1</li>
+      <li>List Item 2</li>
+      <li>List Item 3</li>
+      <li>List Item 4</li>
+      <li>List Item 5</li>
     </ol>
 
     <!--Table-->
     <table>
-        <thead>
-            <tr>
-                <th>Table</th>
-                <th>Row</th>
-                <th>Headings</th>
-            </tr>
-            <tr>
-                <th>Name</th>
-                <th>Email</th>
-                <th>Age</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Table</td>
-                <td>Data</td>
-                <td>Holy</td>
-            </tr>
-            <tr>
-                <td>Mark</td>
-                <td>notwzh@usc.edu</td>
-                <td>19</td>
-            </tr>
-            <tr>
-                <td>Me</td>
-                <td>not153@qq.com</td>
-                <td>19.1</td>
-            </tr>
-        </tbody>
+      <thead>
+        <tr>
+          <th>Table</th>
+          <th>Row</th>
+          <th>Headings</th>
+        </tr>
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Age</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Table</td>
+          <td>Data</td>
+          <td>Holy</td>
+        </tr>
+        <tr>
+          <td>Mark</td>
+          <td>notwzh@usc.edu</td>
+          <td>19</td>
+        </tr>
+        <tr>
+          <td>Me</td>
+          <td>not153@qq.com</td>
+          <td>19.1</td>
+        </tr>
+      </tbody>
     </table>
 
     <!--line break-->
-    <br>
+    <br />
     <!--line rule-->
-    <hr>
-
+    <hr />
 
     <!--Forms-->
     <form action="process.php" method="POST">
-        <div> <label>Name</label>
-            <input type="text" name="name" placeholder="Enter name" id="">
-        </div>
-        <br>
-        <div> <label>Age</label>
-            <input type="number" name="age" value="19" id="">
-        </div>
-        <br>
-        <div> <label>Birthday</label>
-            <input type="date" name="birthday" id="">
-        </div>
-        <br>
-        <div> <label>Email</label>
-            <input type="email" name="email" placeholder="xxx@xx.com" id="">
-        </div>
-        <br>
-        <div> <label>Message</label>
-            <textarea name="message" placeholder="Say something" id="" cols="30" rows="10"></textarea>
-        </div>
-        <br>
-        <div> <label>Gemder</label>
-            <select name="gender" id="">
-                <option value="male">Male</option>
-                <option value="female">Female</option>
-                <option value="other">Other</option>
-            </select>
-        </div>
-        <br>
-        <input type="submit" name="submit" value="Submit">
+      <div>
+        <label>Name</label>
+        <input type="text" name="name" placeholder="Enter name" id="" />
+      </div>
+      <br />
+      <div>
+        <label>Age</label>
+        <input type="number" name="age" value="19" id="" />
+      </div>
+      <br />
+      <div>
+        <label>Birthday</label>
+        <input type="date" name="birthday" id="" />
+      </div>
+      <br />
+      <div>
+        <label>Email</label>
+        <input type="email" name="email" placeholder="xxx@xx.com" id="" />
+      </div>
+      <br />
+      <div>
+        <label>Message</label>
+        <textarea
+          name="message"
+          placeholder="Say something"
+          id=""
+          cols="30"
+          rows="10"
+        ></textarea>
+      </div>
+      <br />
+      <div>
+        <label>Gemder</label>
+        <select name="gender" id="">
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+      <br />
+      <input type="submit" name="submit" value="Submit" />
     </form>
 
     <!--Button-->
     <button>Click Me, Easy, Nothing happens</button>
-    <br>
+    <br />
     <a href="pomegranate.jpg">
-        <!--the line above allows user to click and see the full image -->
-        <img src="pomegranate.jpg" width="50%" height="auto" alt="My sample image">
+      <!--the line above allows user to click and see the full image -->
+      <img
+        src="pomegranate.jpg"
+        width="50%"
+        height="auto"
+        alt="My sample image"
+      />
     </a>
 
     <!--Quptations-->
     <blockquote cite="http://google.com">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, hic.
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae, hic.
     </blockquote>
 
     <p>The <abbr title="World Wide Web">WWW</abbr> is awsome</p>
 
     <p><cite>HTML exercise</cite> by Mark</p>
 
-
-    <p>Check out this exercise:
-        <a href="usingHTML5semanticTags.html">usingHTML5semanticTags.html
-        </a>
+    <p>
+      Check out this exercise:
+      <a href="usingHTML5semanticTags.html">usingHTML5semanticTags.html </a>
     </p>
-    <div style="margin-top: 30rem"></div>
-
-
-</body>
-
+    <div style="margin-top: 30rem;"></div>
+  </body>
 </html>
