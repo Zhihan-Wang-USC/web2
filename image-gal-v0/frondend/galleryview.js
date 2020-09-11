@@ -47,7 +47,7 @@ window.addEventListener('DOMContentLoaded', function (e) {
     }
 
     function newNode() {
-        var size = Array(6).fill().map((_,i) => toString(i));
+        var size = Array(5).fill().map((_,i) => toString(i));
         let i = 0;
 
         return function () {
