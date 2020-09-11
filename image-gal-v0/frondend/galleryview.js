@@ -1,6 +1,6 @@
 window.addEventListener('DOMContentLoaded', function (e) {
 
-    var waterfall = new Waterfall({ minBoxWidth: 400 });
+    var waterfall = new Waterfall({ minBoxWidth: 200 });
 
     // button click handle
     var btn = document.getElementById('add-btn');
