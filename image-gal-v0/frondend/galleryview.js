@@ -47,7 +47,7 @@ window.addEventListener('DOMContentLoaded', function (e) {
     }
 
     function newNode() {
-        var size = Array(11).fill().map((_,i) => toString(i));
+        var size = Array(6).fill().map((_,i) => toString(i));
         let i = 0;
 
         return function () {
@@ -74,6 +74,9 @@ window.addEventListener('DOMContentLoaded', function (e) {
         };
     }
     Array(10).fill().forEach(() => {
-        waterfall.addBox(boxHandle())
+        waterfall.addBox(boxHandle());
+        waterfall.addBox(boxHandle());
+        waterfall.addBox(boxHandle());
+        waterfall.addBox(boxHandle());
     });
 });
