@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/@lottiefiles/lottie-interactivity@latest/dist/lottie-interactivity.min.js"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <title>Document</title>
+    <style>
+    *{padding:0;margin:0;}
+    </style>
+</head>
+<body>
+    <div style="height: 80vh; background-color: white; display: flex; justify-content: center;">
+    </div>
+	
+	<iframe style="display:none;" width="560" height="315" src="https://www.youtube.com/embed/yZ3QjvqNZXw?rel=0&autoplay=1" frameborder="0" allow="accelerometer; autoplay; loop; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	
+    <lottie-player id="St1_L1" src="./../zs_src/St1_L1.json" style="max-width:600px; margin: 0px auto;position: relative; top:-0px"></lottie-player>
+    <lottie-player id="St1_L2" src="./../zs_src/St1_L2.json" style="max-width:600px; margin: 0px auto;position: relative; top:-6px"></lottie-player>
+
+
+    </div>
+
+
+    <script>
+        LottieInteractivity.create({
+            mode: 'scroll',
+            player: '#St1_L1',
+            actions: [
+                {
+                visibility: [0.3,0.6],
+                type: 'seek',
+                frames: [0, 50],
+                },
+            ],
+        });
+
+
+        LottieInteractivity.create({
+            mode: 'scroll',
+            player: '#St1_L2',
+            actions: [
+                {
+                visibility: [0.3,0.6],
+                type: 'seek',
+                frames: [0, 50],
+                },
+            ],
+        });
+    </script>
+</body>
+</html>
