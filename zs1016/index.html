@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <script src="./../jquery-3.5.1.js"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-interactivity@latest/dist/lottie-interactivity.min.js"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"> -->
+    <title>Zoe's Project</title>
+    <style>
+    *{padding:0;margin:0;}
+    </style>
+</head>
+<body>
+    <div style="height: 80vh; background-color: white; display: flex; justify-content: center;">
+    </div>
+	
+	<iframe style="display:none;" width="560" height="315" src="https://www.youtube.com/embed/yZ3QjvqNZXw?rel=0&autoplay=1" frameborder="0" allow="accelerometer; autoplay; loop; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	
+    <lottie-player id="St1_L1" src="./../zs_src/St1_L1_v3_30f.json"></lottie-player>
+    <lottie-player id="St1_L23" src="./../zs_src/St1_L2,3_v2_45f.json"></lottie-player>
+    <lottie-player id="St1_L4" src="./../zs_src/St1_L4_V2_30f.json"></lottie-player>
+    <lottie-player id="St1_L5" src="./../zs_src/St1_L5_25f.json"></lottie-player>
+    <lottie-player id="St1_L6" src="./../zs_src/St1_L6_30f.json"></lottie-player>
+    <lottie-player id="St1_L7" src="./../zs_src/St1_L7_35f.json"></lottie-player>
+
+    <!-- <lottie-player id="St1_L1" src="https://assets3.lottiefiles.com/packages/lf20_zmhpwokq.json" style="max-width:600px; margin: 0px auto;position: relative; top:-0px"></lottie-player>
+    <lottie-player id="St1_L23" src="https://assets3.lottiefiles.com/packages/lf20_zmhpwokq.json" style="max-width:600px; margin: 0px auto;position: relative; top:-6px"></lottie-player>
+    <lottie-player id="St1_L4" src="https://assets3.lottiefiles.com/packages/lf20_zmhpwokq.json" style="max-width:600px; margin: 0px auto;position: relative; top:-12px"></lottie-player> -->
+
+
+    </div>
+
+
+    <script>
+        let config = [
+            ['#St1_L1', { visibility: [0.3,0.6], type: 'seek', frames: [0, 30],}],
+            ['#St1_L23',{ visibility: [0.3,0.6], type: 'seek', frames: [0, 45],}],
+            ['#St1_L4', { visibility: [0.3,0.6], type: 'seek', frames: [0, 30],}],
+            ['#St1_L5', { visibility: [0.3,0.6], type: 'seek', frames: [0, 25],}],
+            ['#St1_L6', { visibility: [0.3,0.6], type: 'seek', frames: [0, 30],}],
+            ['#St1_L7', { visibility: [0.3,0.6], type: 'seek', frames: [0, 35],}],
+        ];
+
+        for (const idx in config) {
+            player = config[idx][0];
+            actions = config[idx][1];
+            $(player).css({
+                "max-width":"600px",
+                "margin":"0px auto",
+                "position":"relative",
+                "top":`${(-6)*idx}px`
+            });
+            LottieInteractivity.create({
+                mode: 'scroll',
+                player: player,
+                actions: [
+                    actions,
+                ],
+            });
+        }
+        // LottieInteractivity.create({
+        //     mode: 'scroll',
+        //     player: '#St1_L1',
+        //     actions: [
+        //         {
+        //         visibility: [0.3,0.6],
+        //         type: 'seek',
+        //         frames: [0, 30],
+        //         },
+        //     ],
+        // });
+
+
+        // LottieInteractivity.create({
+        //     mode: 'scroll',
+        //     player: '#St1_L23',
+        //     actions: [
+        //         {
+        //         visibility: [0.3,0.6],
+        //         type: 'seek',
+        //         frames: [0, 45],
+        //         },
+        //     ],
+        // });
+
+
+        // LottieInteractivity.create({
+        //     mode: 'scroll',
+        //     player: '#St1_L4',
+        //     actions: [
+        //         {
+        //         visibility: [0.3,0.6],
+        //         type: 'seek',
+        //         frames: [0, 30],
+        //         },
+        //     ],
+        // });
+    </script>
+</body>
+</html>

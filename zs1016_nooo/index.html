@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./../jquery-3.5.1.js"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-interactivity@latest/dist/lottie-interactivity.min.js"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"> -->
+    <title>Zoe's Project</title>
+    <style>
+    *{padding:0;margin:0;}
+    </style>
+</head>
+<body>
+    <div style="height: 80vh; background-color: white; display: flex; justify-content: center;">
+    </div>
+	
+	<iframe style="display:none;" width="560" height="315" src="https://www.youtube.com/embed/yZ3QjvqNZXw?rel=0&autoplay=1" frameborder="0" allow="accelerometer; autoplay; loop; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	
+    <div id="lottieWraper">
+    </div>
+
+    <!-- <lottie-player id="St1_L1" src="./../zs_src/St1_L1_v2_30f.json" style="max-width:600px; margin: 0px auto;position: relative; top:-0px"></lottie-player>
+    <lottie-player id="St1_L23" src="./../zs_src/St1_L2,3_45f.json" style="max-width:600px; margin: 0px auto;position: relative; top:-6px"></lottie-player>
+    <lottie-player id="St1_L4" src="./../zs_src/St1_L4_30f.json" style="max-width:600px; margin: 0px auto;position: relative; top:-12px"></lottie-player> -->
+
+    <!-- <lottie-player id="St1_L1" src="https://assets3.lottiefiles.com/packages/lf20_zmhpwokq.json" style="max-width:600px; margin: 0px auto;position: relative; top:-0px"></lottie-player>
+    <lottie-player id="St1_L23" src="https://assets3.lottiefiles.com/packages/lf20_zmhpwokq.json" style="max-width:600px; margin: 0px auto;position: relative; top:-6px"></lottie-player>
+    <lottie-player id="St1_L4" src="https://assets3.lottiefiles.com/packages/lf20_zmhpwokq.json" style="max-width:600px; margin: 0px auto;position: relative; top:-12px"></lottie-player> -->
+
+
+    </div>
+
+
+    <script>
+        var myContent = [
+            ["https://assets3.lottiefiles.com/packages/lf20_zmhpwokq.json",
+                {visibility: [0.3,0.6], type: 'seek', frames: [0, 30],},
+            ],
+            ["https://assets3.lottiefiles.com/packages/lf20_zmhpwokq.json",
+                {visibility: [0.3,0.6], type: 'seek', frames: [0, 30],}
+            ],
+        ];
+
+        var myWraper = document.getElementById('lottieWraper');
+
+        for (let index = 0; index < myContent.length; index++) {
+            let src = myContent[index][0];
+            let actions = myContent[index][1];
+            let id = `myLottie_${index}`;
+            
+            let lottiePlayer = document.createElement('lottie-player').setAttribute('id',`${id}`).setAttribute('src',`${src}`).setAttribute('style',`max-width:600px; margin: 0px auto;position: relative; top:${(-6)*index}px`);
+
+            myWraper.appendChild(lottiePlayer);
+            lottiePlayer.
+
+            // myWraper.innerHTML += ` <lottie-player id="${id}" src="${src}" style="max-width:600px; margin: 0px auto;position: relative; top:${(-6)*index}px "></lottie-player>`;
+            
+            // LottieInteractivity.create({
+            //     mode: 'scroll',
+            //     player: ,
+            //     actions: [
+            //         actions,
+            //     ],
+            // });
+        }
+
+        console.log(myWraper);
+        
+
+        for (let index = 0; index < myContent.length; index++) {
+            let src = myContent[index][0];
+            let actions = myContent[index][1];
+            
+            console.log(`#myLottie_${index}`);
+            LottieInteractivity.create({
+                mode: 'scroll',
+                player: `#myLottie_${index}`,
+                actions: [
+                    actions,
+                ],
+            });
+        }
+
+    </script>
+</body>
+</html>
