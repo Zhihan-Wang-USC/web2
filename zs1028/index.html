@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <script src="./../jquery-3.5.1.js"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-interactivity@latest/dist/lottie-interactivity.min.js"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"> -->
+
+    <title>Zoe's Project</title>
+    
+    <style>
+    *{padding:0;margin:0;}
+    </style>
+</head>
+<body>
+    <!-- display blank block of 80 View Height -->
+    <div style="height: 80vh; background-color: rgb(255, 241, 241); display: flex; justify-content: center;"></div>
+	
+    <!-- playing music -->
+	<iframe style="display:none;" width="560" height="315" src="https://www.youtube.com/embed/yZ3QjvqNZXw?rel=0&autoplay=1" frameborder="0" allow="accelerometer; autoplay; loop; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+	
+    <!-- display lottie players (with resources) (src = *the relative path of .json file with respect to this html file*) -->
+    <lottie-player id="St1_L1"  src="./../zs_src/St1_L1___v3_30f.json"></lottie-player>
+    <lottie-player id="St1_L23" src="./../zs_src/St1_L2,3_v3_45f.json"></lottie-player>
+    <lottie-player id="St1_L4"  src="./../zs_src/St1_L4___v2_30f.json"></lottie-player>
+    <lottie-player id="St1_L5"  src="./../zs_src/St1_L5___v1_25f.json"></lottie-player>
+    <lottie-player id="St1_L6"  src="./../zs_src/St1_L6___v2_30f.json"></lottie-player>
+    <lottie-player id="St1_L7"  src="./../zs_src/St1_L7___v2_35f.json"></lottie-player>
+
+    <lottie-player id="St2_L2"  src="./../zs_src/St2_2_25f.json"></lottie-player>
+    <lottie-player id="St2_L3"  src="./../zs_src/St2_3_25f.json"></lottie-player>
+    <lottie-player id="St2_L4"  src="./../zs_src/St2_4_25f.json"></lottie-player>
+    <lottie-player id="St2_L5"  src="./../zs_src/St2_5_21f.json"></lottie-player>
+    <lottie-player id="St2_L6"  src="./../zs_src/St2_6_25f.json"></lottie-player>
+    <lottie-player id="St2_L7"  src="./../zs_src/St2_7_25f.json"></lottie-player>
+    <lottie-player id="St2_L8"  src="./../zs_src/St2_8_25f.json"></lottie-player>
+
+
+    
+    <!-- display blank block of 80 View Height -->
+    <div style="height: 80vh; background-color: rgb(255, 241, 241); display: flex; justify-content: center;"></div>
+
+    <script>
+
+        //  set up parameters for each lottie player.
+        //  the first entry in each line should be corresponding lottie-player id,
+        //  the second entry, is configuration details, just follow the existing ones
+        let config = [
+            ['#St1_L1', { visibility: [0.3,0.6], type: 'seek', frames: [0, 30],}],
+            ['#St1_L23',{ visibility: [0.3,0.6], type: 'seek', frames: [0, 45],}],
+            ['#St1_L4', { visibility: [0.3,0.6], type: 'seek', frames: [0, 30],}],
+            ['#St1_L5', { visibility: [0.3,0.6], type: 'seek', frames: [0, 25],}],
+            ['#St1_L6', { visibility: [0.3,0.6], type: 'seek', frames: [0, 30],}],
+            ['#St1_L7', { visibility: [0.3,0.6], type: 'seek', frames: [0, 35],}],
+            
+            ['#St2_L2', { visibility: [0.3,0.6], type: 'seek', frames: [0, 25],}],
+            ['#St2_L3', { visibility: [0.3,0.6], type: 'seek', frames: [0, 25],}],
+            ['#St2_L4', { visibility: [0.3,0.6], type: 'seek', frames: [0, 25],}],
+            ['#St2_L5', { visibility: [0.3,0.6], type: 'seek', frames: [0, 21],}],
+            ['#St2_L6', { visibility: [0.3,0.6], type: 'seek', frames: [0, 25],}],
+            ['#St2_L7', { visibility: [0.3,0.6], type: 'seek', frames: [0, 25],}],
+            ['#St2_L8', { visibility: [0.3,0.6], type: 'seek', frames: [0, 25],}]
+        ];
+
+        // this loops over config, and thus enable animation on lottie-player
+        for (const idx in config) {
+            player = config[idx][0];
+            actions = config[idx][1];
+            $(player).css({
+                "max-width":"600px",
+                "margin":"0px auto",
+                "position":"relative",
+                "top":`${(-6)*idx}px`
+            });
+            LottieInteractivity.create({
+                mode: 'scroll',
+                player: player,
+                actions: [
+                    actions,
+                ],
+            });
+        }
+    </script>
+</body>
+</html>
