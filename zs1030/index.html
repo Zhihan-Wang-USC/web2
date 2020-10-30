@@ -59,7 +59,7 @@
 
     
     <!-- display blank block of 80 View Height -->
-    <div id="ending_block" style="height: 80vh; background-color: rgb(255, 241, 241); display: flex; justify-content: center;"></div>
+    <div id="ending_block" style="height: 80vh; background-color: rgb(255, 241, 241); "></div>
 
     <script>
 
@@ -115,7 +115,11 @@
                 ],
             });
         }
-        $("#ending_block").css({"top":`${-6*config.length}px`});
+        $("#ending_block").css({
+            "top":`${-6*config.length}px`,
+            "margin":"0px auto",
+            "position":"relative"
+        });
     </script>
 </body>
 </html>
