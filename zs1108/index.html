@@ -168,7 +168,9 @@
                 "max-width":"600px",
                 "margin":"0px auto",
                 "position":"relative",
-                "top":`${(-6)*idx}px`
+                "-webkit-position":"relative",
+                "top":`${(-6)*idx}px`,
+                "-webkit-top":`${(-6)*idx}px`
             });
             LottieInteractivity.create({
                 mode: 'scroll',
