@@ -4,8 +4,8 @@
 }
 
 lottie-player {
-    max-width: "600px";
-    margin: "0px auto";
+    max-width: 600px;
+    margin: 0px auto;
 
     display: flex;
     flex-flow: column;
