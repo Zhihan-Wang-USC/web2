@@ -1,0 +1,11 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+lottie-player {
+    width: min(600px,100vw);
+    max-width: 600px;
+    margin: 0px auto -6px auto;
+    display: flex;
+}
