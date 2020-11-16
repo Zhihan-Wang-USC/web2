@@ -4,6 +4,7 @@
 }
 
 lottie-player {
+    width: 600px;
     max-width: 600px;
     margin: 0px auto -6px auto;
     display: flex;
