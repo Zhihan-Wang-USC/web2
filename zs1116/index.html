@@ -85,12 +85,6 @@
     <lottie-player id="St3_L14"  src="./../zs_src/St3_14_25f.json"></lottie-player>
 
 
-
-
-    
-    <!-- display blank block of 80 View Height -->
-    <div id="ending_block" style="height: 80vh; background-color: rgb(255, 241, 241); "></div>
-
     <script>
 
         //  set up parameters for each lottie player.
@@ -164,12 +158,6 @@
         for (const idx in config) {
             player = config[idx][0];
             actions = config[idx][1];
-            $(player).css({
-                // "position":"relative",
-                // "-webkit-position":"relative",
-                // "top":`${(-6)*idx}px`,
-                // "-webkit-top":`${(-6)*idx}px`
-            });
             LottieInteractivity.create({
                 mode: 'scroll',
                 player: player,
