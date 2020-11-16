@@ -9,11 +9,10 @@
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
     <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"> -->
 
+    <link rel="stylesheet" href="style.css" />
+
     <title>Zoe's Project</title>
-    
-    <style>
-    *{padding:0;margin:0;}
-    </style>
+
     
 </head>
 <body>
@@ -166,12 +165,10 @@
             player = config[idx][0];
             actions = config[idx][1];
             $(player).css({
-                "max-width":"600px",
-                "margin":"0px auto",
-                "position":"relative",
-                "-webkit-position":"relative",
-                "top":`${(-6)*idx}px`,
-                "-webkit-top":`${(-6)*idx}px`
+                // "position":"relative",
+                // "-webkit-position":"relative",
+                // "top":`${(-6)*idx}px`,
+                // "-webkit-top":`${(-6)*idx}px`
             });
             LottieInteractivity.create({
                 mode: 'scroll',
@@ -181,11 +178,6 @@
                 ],
             });
         }
-        $("#ending_block").css({
-            "top":`${-6*config.length}px`,
-            "margin":"0px auto",
-            "position":"relative"
-        });
     </script>
 </body>
 </html>
