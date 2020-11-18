@@ -22,10 +22,12 @@
 <body>
 
     <!-- playing music -->
-    <iframe style="display:none;" width="560" height="315"
+    <!-- <iframe style="display:none;" width="560" height="315"
         src="https://www.youtube.com/embed/I1CpTW5-C94?rel=0&autoplay=1" frameborder="0"
         allow="accelerometer; autoplay; loop; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen></iframe>
+        allowfullscreen></iframe> -->
+
+    <audio id = "bg-music" src="http://bmomark.com/zs_src/zs_bgm.mp3"></audio>
 
     <!-- display lottie players (with resources) (src = *the relative path of .json file with respect to this html file*) -->
 
@@ -192,6 +194,37 @@
                 ],
             });
         }
+
+        function autoPlayMusic() {
+            // 自动播放音乐效果，解决浏览器或者APP自动播放问题
+            function musicInBrowserHandler() {
+                musicPlay(true);
+                document.body.removeEventListener('touchstart', musicInBrowserHandler);
+            }
+            document.body.addEventListener('touchstart', musicInBrowserHandler);
+
+            // 自动播放音乐效果，解决微信自动播放问题
+            function musicInWeixinHandler() {
+                musicPlay(true);
+                document.addEventListener("WeixinJSBridgeReady", function () {
+                    musicPlay(true);
+                }, false);
+                document.removeEventListener('DOMContentLoaded', musicInWeixinHandler);
+            }
+            document.addEventListener('DOMContentLoaded', musicInWeixinHandler);
+        }
+
+        function musicPlay(isPlay) {
+            var media = document.querySelector('#bg-music');
+            if (isPlay && media.paused) {
+                media.play();
+            }
+            // if (!isPlay && !media.paused) {
+            //     media.pause();
+            // }
+        }
+
+        autoPlayMusic();
     </script>
 </body>
 
