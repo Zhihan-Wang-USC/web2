@@ -10,3 +10,18 @@ lottie-player {
     display: flex;
     justify-content: flex-end;
 }
+
+#bgm-wrapper audio {
+    position: relative;
+    top: 20vh;
+    z-index: 1;
+    width: min(400px, 80vw);
+    margin: 0px auto;
+    display: flex;
+    justify-content: flex-end;
+}
+
+#bgm {
+    position: absolute;
+    height: 0;
+}

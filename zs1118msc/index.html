@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script src="http://bmomark.com/jquery-3.5.1.js"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-interactivity@latest/dist/lottie-interactivity.min.js"></script>
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"> -->
+
+    <link rel="stylesheet" href="style.css" />
+
+    <title>
+        Cogida and Death
+    </title>
+
+
+</head>
+
+<body>
+
+    <!-- playing music -->
+    <iframe style="" width="560" height="315" src="https://www.youtube.com/embed/I1CpTW5-C94?rel=0&autoplay=1"
+        frameborder="0"
+        allow="accelerometer; autoplay; loop; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/I1CpTW5-C94?autoplay=1" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+
+    <!-- <audio id = "bg-music" src="http://bmomark.com/zs_src/zs_bgm.mp3"></audio>
+    <iframe src="http://bmomark.com/zs_src/zs_bgm.mp3" allow="autoplay" style="display:none" autostart="true" id="iframeAudio">
+</iframe>  -->
+    <!-- <embed src="http://bmomark.com/zs_src/zs_bgm.mp3" loop="true" autostart="true" width="2" height="0"> -->
+
+    <!-- display lottie players (with resources) (src = *the relative path of .json file with respect to this html file*) -->
+
+
+    <script>
+
+        function autoPlayMusic() {
+            // 自动播放音乐效果，解决浏览器或者APP自动播放问题
+            function musicInBrowserHandler() {
+                musicPlay(true);
+                document.body.removeEventListener('touchstart', musicInBrowserHandler);
+            }
+            document.body.addEventListener('touchstart', musicInBrowserHandler);
+
+            // // 自动播放音乐效果，解决微信自动播放问题
+            // function musicInWeixinHandler() {
+            //     musicPlay(true);
+            //     document.addEventListener("WeixinJSBridgeReady", function () {
+            //         musicPlay(true);
+            //     }, false);
+            //     document.removeEventListener('DOMContentLoaded', musicInWeixinHandler);
+            // }
+            // document.addEventListener('DOMContentLoaded', musicInWeixinHandler);
+        }
+
+        function musicPlay(isPlay) {
+            var media = document.querySelector('#bg-music');
+            if (isPlay && media.paused) {
+                media.play();
+            }
+            // if (!isPlay && !media.paused) {
+            //     media.pause();
+            // }
+        }
+
+        // document.addEventListener('touchstart',)
+        autoPlayMusic();
+    </script>
+</body>
+
+</html>
